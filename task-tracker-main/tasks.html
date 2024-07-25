@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Task Tracker</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    
+        <ul class="navbar">
+          <li><a href="/index.html">Home</a></li> 
+          <li><a href="#">All Tasks</a></li>
+          <li><a href="/account.html">Account</a></li>
+        </ul>
+</header>
+
+<div class="btn-container">
+    <button class="btnz">All</button>
+    <button class="btnz">Pending</button>
+    <button class="btnz">Fixed</button>
+    <button class="btnz">Blocked</button>
+    <button class="btnz">Assigned</button>
+</div>
+
+<div class="tasks-list">
+    <span class="tasksoutput" id="tasksoutput"></span>
+</div>
+
+<script src="app.js"></script>
+<script src="tasks.js"></script>
+</body>
+</html>

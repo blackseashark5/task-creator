@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body onload="reloadTasks(); loadTasks();displayTasks();">
+    <header class="header">
+    <a href="#" class="logo">Task Tracker</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li> 
+      <li><a href="/tasks.html">All Tasks</a></li>
+      <li><a href="/account.html">Account</a></li>
+    </ul>
+    </header>
+
+    <div class="insert-tasks" id="insertasks">
+        <h2>New Task:</h2>
+        <ul>
+            Title:
+        </ul>
+        <ul>
+            <input type="text" class="title" id="title">
+        </ul>
+        <ul>
+            Content:
+        </ul>
+        <ul>
+            <textarea id="contents" class="contents"></textarea>
+        </ul>
+        <div class="wrapper-a">
+            <input type="button" class="btn" value="Insert" onclick="insert()">
+            <input type="button" class="btn" value="Cancel" onclick="hideinsertasks()">
+        </div>
+        <div class="error">
+            <span id="error"></span>
+        </div>
+    </div>
+
+    <div class="tasks-list">
+        <span class="tasksoutput" id="tasksoutput"></span>
+    </div>
+    <div class="dropdown">
+        <select id="stats" name="status" size="1" onchange="changeStatus(this.value)">
+            <option value="All">All</option>
+            <option value="Pending">Pending</option>
+            <option value="Fixed">Fixed</option>
+            <option value="Blocked">Blocked</option>
+            <option value="Assigned">Assigned</option>
+        </select>
+    </div>
+
+    <input type="button" class="btn deletebtn" id="standart-rem" value="Delete all Tasks" onclick="clearTasks();">
+
+        <!-- Insert Task Button -->
+    <input type="button" value="+" class="insert-btn" id="insertbtn" onclick="showInsertTasks();">
+
+    <script src="app.js"></script>
+</body>
+</html>

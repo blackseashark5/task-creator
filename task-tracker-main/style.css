@@ -1,0 +1,422 @@
+:root {
+    --mainfont: segoe UI;
+    --black: #333;
+    --shadow: 2px 2px 2px black;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+a, input {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+	
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 100px;
+	background: palevioletred;
+}
+
+.logo {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.navbar{
+	position: relative;
+	display: flex;
+}
+
+.navbar a {
+	font-size: 1rem;
+	padding: 8px 16px;
+	font-weight: 500;
+	color: var(--text-color);
+}
+
+.navbar a:hover {
+	color: white;
+    cursor: pointer;
+}
+
+#menu-icon{
+	font-size: 2rem;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-width: 768px){
+	header {
+		padding: 11px 4%;
+	}
+	#menu-icon {
+		display: initial;
+	}
+	header .navbar{
+		position: fixed;
+		top: 5rem;
+		left: -100%;
+		width: 100%;
+		flex-direction: column;
+		background: black;
+		box-shadow: 0 4px 4px rgb(0 0 0/10%);
+		border-radius: 10px;
+		transition: 0.3s;
+		text-align: center;
+        color:  white;
+	}
+	.navbar a {
+		padding: 1.5rem;
+		display: block;
+	}
+	.navbar.active{
+		left: 0;
+	}
+	.navbar a:hover{
+		color: #fff;
+		background: var(--main-color);
+	}
+}
+
+.dropdown {
+    width: 200px;
+    position: relative;
+    margin: 6px;
+}
+
+.dropbtn {
+    background-color: blue;
+}
+
+.dropbtn:hover {
+    background-color: rgba(71, 122, 163, 0.76);
+}
+
+.dropbtn, .lists {
+    padding: 12px;
+    font-size: 1.2em;
+    font-family: futura Md BT;
+    border: none;
+    outline: none;
+    width: 200px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.content {
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.newlist {
+    transform: scaleY(1);
+}
+
+.lists {
+    background-color: palevioletred;
+}
+
+.lists:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+#small {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+#standart-rem {
+    font-size: 1rem;
+}
+
+a, input {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    padding: 0.5rem 1rem;
+    color: black;
+    border: 1.5px solid palevioletred;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.contents {
+    padding: 1rem;
+    height: 200px;
+    vertical-align: top;
+    font-family: var(--mainfont);
+    color: black;
+    border: 1.5px solid palevioletred;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    resize: none;
+    overflow: auto;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 0;
+    color: black;
+    border: 1.5px solid palevioletred;
+    width: 100%;
+}
+
+.btnhover {
+    background: white;
+    color: black;
+    border: 1.5px solid black;
+}
+
+.deletebtn {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+}
+
+.deletebtnhover {
+    opacity: 1;
+}
+
+.wrapper-a {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20%;
+}
+
+.wrapper-a > .error {
+    margin: 10px;
+}
+
+.error {
+    margin: 10px 20%;
+}
+
+.insert-tasks {
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10vh 10vw;
+}
+
+.insert-tasks > h2 {
+    text-align: center;
+}
+
+.insert-tasks > ul {
+    width: 90%;
+    margin: auto;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+.insert-tasks > ul > input, .insert-tasks > ul > textarea {
+    width: 70vw;
+    font-size: 1.3rem;
+}
+
+.error {
+    text-align: right;
+}
+
+.tasksoutput > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: black;
+}
+
+.tasksoutput > div > span {
+    padding: 30px;
+    background: palevioletred;
+    margin: 10px;
+    height: fit-content;
+    color: black;
+    vertical-align: middle;
+}
+
+
+.tasksoutput > div > span > .x-btn {
+    background: var(--grey);
+    padding: 4px 7px;
+    margin: 0;
+    border: 0;
+}
+
+.tasksoutput > div > span > input:hover {
+    background: blackgrey;
+    color: white;
+}
+
+.tasksoutput > div > span > h2 {
+    color: black;
+}
+
+#heading {
+    
+}
+
+.btn {
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background-color: palevioletred;
+    color: black;
+}
+
+.insert-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    border: 0;
+    border-radius: 50%;
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.05rem;
+    background: var(--grey);
+}
+
+.insert-btn:hover {
+    background: palevioletred;
+}
+
+.insert-btn:active {
+    background: black;
+    color: white;
+}
+
+@media only screen and (max-width: 798px) {
+    header {
+        font-size :3rem;
+    }
+
+    .insert-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+
+    .deletebtn {
+        display: none;
+    }
+
+    .insert-tasks {
+        font-size: 1rem;
+    }
+
+    .insert-tasks > ul {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .insert-tasks > ul > input, .insert-tasks > ul > textarea {
+        width: 45vw;
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .tasksoutput > div {
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 1rem;
+    }
+
+    .tasksoutput > div > span {
+        padding: 20px;
+        background: palevioletred;
+        margin: 5px;
+        height: fit-content;
+        color: black;
+        vertical-align: middle;
+    }
+
+    .x-btn {
+        font-size: 1rem;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+.grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.tasks-containers {
+    width: 95%;
+    margin: auto;
+}
+
+.btn-container {
+    margin-top: 1rem;
+    border: 20px;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+}
+
+.btnz {
+    color: palevioletred;
+    background-color: white;
+    cursor: pointer;
+}

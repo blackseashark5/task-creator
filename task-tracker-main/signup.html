@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyBa0IcL4UXCFLZXAlbmbbpBF0OzFwJAzxI",
+          authDomain: "task-tracker-415a5.firebaseapp.com",
+          projectId: "task-tracker-415a5",
+          storageBucket: "task-tracker-415a5.appspot.com",
+          messagingSenderId: "934041592554",
+          appId: "1:934041592554:web:4501a8eab2ebfd15e02d93",
+          measurementId: "G-JPE6HZJ7GK"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+</script>
+    <header class="header">
+    <a href="#" class="logo">Task Tracker</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navbar">
+      <li><a href="/index.html">Home</a></li> 
+      <li><a href="/tasks.html">All Tasks</a></li>
+      <li><a href="/account.html">Account</a></li>
+    </ul>
+    </header>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+
+        <form action="">
+
+            <div class="form-item">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+
+            <div class="form-item">
+                <!-- add a password format display -->
+                <span class="pwd-format">
+                    8-15 AlphaNumeric Characters
+                </span>
+                <input type="password" name="password" id="password" placeholder="Enter password">
+            </div>
+
+            <div class="accept-box">
+                <input type="checkbox" name="accept" id="accept">
+                <p>I accept the <a href="#">Terms & Conditions</a></p>
+            </div>
+
+            <div class="form-btns">
+                <button class="signup" id="signup" type="submit">Sign Up</button>
+                <div class="options">
+                    Already hav an account? <a href="/account.html">Login here</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+<script src="app.js"></script>
+<script src="auth.js"></script>
+
+    <script src="signup.js"></script>
+</body>
+</html>
